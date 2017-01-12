@@ -1,0 +1,90 @@
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+
+  &:hover {
+    .remove {
+      display: block;
+    }
+  }
+
+  .name {
+    font-size: 28px;
+  }
+  .email {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #777;
+  }
+  .remove,
+  .favorite {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .favorite {
+    top: 10px;
+    color: #ffcb60;
+    font-size: 42px;
+  }
+
+  .remove {
+    bottom: 10px;
+    display: none;
+    color: #f00;
+  }
+
+  .send {
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      border: none;
+      background: #ff6527;
+      color: #fafafa;
+      text-transform: uppercase;
+      border-radius: 2px;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+  }
+
+}
+
+.tile {
+  .contact {
+    width: 200px;
+    box-sizing: initial;
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    .name {
+      font-size: 18px;
+    }
+    .email {
+      font-size: 14px;
+    }
+    .remove {
+      font-size: 18px;
+      bottom: 15px;
+      right: 15px;
+    }
+    .favorite {
+      font-size: 24px;
+    }
+  }
+}

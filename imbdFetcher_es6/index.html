@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sergey Yarchuk">
+
+    <title>IMDB Fetcher es2015| Sergey Yarchuk</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#menu" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">IMDB Fetcher es2015</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a data-toggle="modal" data-target="#aboutModal" href="#aboutModal">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <div class="pull-left">
+                <h3 class="panel-title">IMDB Fetcher</h3>
+            </div>
+            <div class="pull-right">
+                <form class="form-inline" role="form" id="search-form">
+                    <div class="form-group">
+                        <label for="search-input">Search:</label>
+                        <input id="search-input" class="form-control" type="text" placeholder="Type your query...">
+                    </div>
+                    <button type="submit" class="btn btn-default">Go!</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="active sort-header js-sort-header">
+                        <th data-key="id" data-sort-direction="+">Id <span></span></th>
+                        <th data-key="title" data-sort-direction="+">Title <span></span></th>
+                        <th data-key="original_language" data-sort-direction="+">Language <span></span></th>
+                        <th data-key="popularity" data-sort-direction="+">Popularity <span></span></th>
+                        <th data-key="vote_count" data-sort-direction="+">Votes <span></span></th>
+                        <th data-key="vote_average" data-sort-direction="+">Rating <span></span></th>
+                        <th data-key="release_date" data-sort-direction="+">Release <span></span></th>
+                    </tr>
+                </thead>
+                <tbody class="js-table-content"></tbody>
+            </table>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="pull-left">
+                <p>Results: <strong><span class="results-counter">0</span></strong></p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="container">
+    <hr>
+    <p>IMDB Fetcher &copy; Sergey Yarchuk, 2017</p>
+</footer>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="about">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="about">IMDB Fetcher</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Information</h4>
+                <ul>
+                    <li>Developer: Sergey Yarchuk</li>
+                    <li>Tel: <a href="tel:+380662718208">+38 (066) 271-82-08</a></li>
+                    <li>Skype: <a href="callto:fo0lman"> fo0lman</a></li>
+                    <li>Email: <a href="mailto:foolman.sy@gmail.com">foolman.sy@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="data-row-tpl" type="text/html">
+    <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td>{{original_language}}</td>
+        <td>{{popularity}}</td>
+        <td>{{vote_count}}</td>
+        <td>{{vote_average}}</td>
+        <td>{{release_date}}</td>
+    </tr>
+</script>
+
+<script id="error-row-tpl" type="text/html">
+    <tr>
+        <td colspan="7">{{message}}</td>
+    </tr>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.19.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
