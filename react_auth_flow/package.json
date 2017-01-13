@@ -1,5 +1,5 @@
 {
-  "name": "auth-hoc-flow",
+  "name": "auth-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.0",
+    "camelcase-keys": "^4.0.0",
     "json-loader": "^0.5.4",
     "jwt-simple": "^0.5.1",
     "material-ui": "^0.16.1",

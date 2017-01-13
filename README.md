@@ -1,2 +1,1 @@
-# code-samples
-My own code samples
+## Welcome to Code demo Pages

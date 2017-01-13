@@ -32,4 +32,6 @@
     const interestsCount_snd = {};
     users.forEach(user => user.interests.forEach(interest => interestsCount_snd[interest] = interestsCount_snd[interest] + 1 || 1 ));
 
+    console.log(interestsCount_snd);
+
 }

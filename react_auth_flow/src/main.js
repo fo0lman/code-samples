@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router, Route, Redirect, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux'
 import { extractSession } from './utils/session';
 
@@ -23,7 +23,8 @@ import 'normalize.css';
 import './assets/main.css';
 
 const routes = (
-    <Route component={App}>
+    <Route path="/" component={App}>
+        <IndexRoute component={LoginPage} />
         <Route path="login" component={LoginPage} />
         <Route path="about" component={AboutPage} />
 

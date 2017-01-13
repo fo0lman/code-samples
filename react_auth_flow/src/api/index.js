@@ -27,17 +27,17 @@ export function fetchMovie(id) {
 }
 
 const USERS = [{
-    login: 'max',
-    name: 'Max',
+    login: 'user',
+    name: 'user',
     avatar: 'https://pbs.twimg.com/profile_images/80699901/max_400x400.jpg',
-    password: 'qwerty12345'
+    password: 'user'
 }, {
-    login: 'kotik9000',
-    name: 'Marysya',
+    login: 'admin',
+    name: 'admin',
     avatar: 'https://pbs.twimg.com/profile_images/668830888499789824/Yf2U7LjB.jpg',
-    password: '12345678'
+    password: 'admin'
 }];
-const SECRET = 'react2';
+const SECRET = 'react';
 
 export function auth(login, password) {
     return new Promise((resolve, reject) => {
