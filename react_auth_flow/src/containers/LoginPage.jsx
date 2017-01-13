@@ -28,6 +28,9 @@ const styles = {
     error: {
         color: 'red',
         fontWeight: 'bold'
+    },
+    info: {
+        textAlign: 'center'
     }
 };
 
@@ -119,6 +122,7 @@ export default class LoginPage extends Component {
                         onClick={this.handleLogIn}
                     />
                 </Card>
+                <p style={styles.info}>Demo: admin(admin), user(user)</p>
             </div>
         );
     }
