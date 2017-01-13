@@ -26,4 +26,6 @@
     }];
 
     const averageAmount = orders.reduce((totalAmount, order, index, orders) => totalAmount + (order.amount / orders.length), 0);
+
+    console.log(averageAmount);
 }
